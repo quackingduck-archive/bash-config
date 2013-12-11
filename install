@@ -1,14 +1,17 @@
 #!/bin/sh
 
-read -p "This will delete ~/.bash_profile press y to proceed: " confirm
+read -p "This will delete ~/.bash_profile, ~/.inputrc and ~/.ps1 press y to proceed: " confirm
 
 dir=$(cd $(dirname $0); pwd)
 
-echo $dir
-
 test $confirm = 'y' -o $confirm = 'Y' && {
-  rm -rf $HOME/.bash_profile
+
   rm -rf $HOME/.ps1
-  ln -s "$dir/ps1.sh"     $HOME/.ps1
+  ln -s "$dir/ps1.sh" $HOME/.ps1
+
+  rm -rf $HOME/.bash_profile
   ln -s "$dir/profile.sh" $HOME/.bash_profile
+
+  rm -rf $HOME/.inputrc
+  ln -s "$dir/inputrc" $HOME/.inputrc
 }
