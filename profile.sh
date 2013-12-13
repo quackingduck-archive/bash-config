@@ -16,12 +16,11 @@ _look_for_executables_in "/usr/local/share/npm/bin" &&
 # Clojure Executables
 _look_for_executables_in "$HOME/.cljr/bin"
 
-# Ruby Executables (via rbenv) Executables
-_look_for_executables_in "$HOME/.rbenv/bin" &&
-  eval "$(rbenv init -)" # And then run the init script
-
 # Python Executables (via with homebrew)
 _look_for_executables_in "/usr/local/share/python"
+
+# Ruby Executables (via rbenv)
+test -d "$HOME/.rbenv" && eval "$(rbenv init -)"
 
 # Heroku Toolbelt
 _look_for_executables_in "/usr/local/heroku/bin"
