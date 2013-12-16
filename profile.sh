@@ -39,7 +39,7 @@ test -f  "$HOME/.ps1" &&
 # Set sublime to the default editor and alias it to `e` if it is present
 subl=`which subl`
 test $subl &&
-  export EDITOR="'$subl' --wait" &&
+  export EDITOR="$subl --wait" &&
   alias e=subl
 
 # ---
