@@ -16,9 +16,6 @@ _look_for_executables_in "/usr/local/share/npm/bin" &&
 # Clojure Executables
 _look_for_executables_in "$HOME/.cljr/bin"
 
-# Python Executables (via with homebrew)
-_look_for_executables_in "/usr/local/share/python"
-
 # Ruby Executables (via rbenv)
 test -d "$HOME/.rbenv" && eval "$(rbenv init -)"
 
