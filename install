@@ -2,7 +2,7 @@
 
 no_prompt=`test $1 && test '--no-prompt' = $1 && echo true`
 
-test $no_prompt && read -p "This will delete ~/.bash_profile, ~/.inputrc and ~/.ps1 press y to proceed: " confirm
+test $no_prompt || read -p "This will delete ~/.bash_profile, ~/.inputrc and ~/.ps1 press y to proceed: " confirm
 
 dir=$(cd $(dirname $0); pwd)
 
