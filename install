@@ -1,6 +1,6 @@
 #!/bin/sh
 
-read -p "This will delete ~/.bash_profile, ~/.inputrc and ~/.ps1 press y to proceed: " confirm
+test '--no-prompt' = $1 && read -p "This will delete ~/.bash_profile, ~/.inputrc and ~/.ps1 press y to proceed: " confirm
 
 dir=$(cd $(dirname $0); pwd)
 
