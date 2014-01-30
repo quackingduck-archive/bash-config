@@ -46,6 +46,12 @@ which -s bundle && alias be="bundle exec"
 
 # ---
 
+# Git completion to make git (outside of git-sh) easier
+test -f "/usr/local/etc/bash_completion.d/git-completion.bash" &&
+  source "/usr/local/etc/bash_completion.d/git-completion.bash"
+
+# ---
+
 # Annotate file types : -F
 # Colors              : -G
 # Human file sizes    : -h
