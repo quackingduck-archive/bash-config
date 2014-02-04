@@ -20,7 +20,7 @@ _look_for_executables_in "$HOME/.cljr/bin"
 test -d "$HOME/.rbenv" && eval "$(rbenv init -)"
 
 # Heroku Toolbelt
-_look_for_executables_in "/usr/local/heroku/bin"
+_look_for_executables_in "/usr/local/bin/heroku"
 
 # Custom Executables
 _look_for_executables_in "$HOME/bin"
@@ -41,7 +41,7 @@ test $subl &&
 
 # ---
 
-# For rubby development
+# For ruby development
 which -s bundle && alias be="bundle exec"
 
 # ---
